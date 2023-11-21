@@ -1,0 +1,229 @@
+html,
+body {
+	min-height: 100%
+}
+
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+
+.container {
+	height: 100%;
+	position: realative;
+}
+
+/* Video Properties For Embeded Youtube Video*/
+
+.video-container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	/* border: 1px solid #ccc;  */
+}
+
+.video-container iframe {
+	max-width: 100%;
+	max-height: 100%;
+	/* box-sizing: border-box; */
+}
+
+.text {
+	text-align: center;
+	padding: 50px 0px;
+}
+
+.text h1 {/* Gradient color added to h1*/
+	/* background: rgb(255,0,0); */
+	background: linear-gradient(2deg, rgba(255,0,0,1) 0%, rgba(121,9,21,1) 94%, rgba(0,0,0,1) 100%);
+	position: relative;
+	font-size: 30px;
+	/* margin-bottom: 10px; */
+}
+
+.text p {
+	color:white;
+	background: linear-gradient(2deg, rgba(255,0,0,1) 0%, rgba(121,9,21,1) 94%, rgba(0,0,0,1) 100%);
+	position: relative;
+	font-size: 30px;
+	margin-bottom: 10px;
+	font-size: 20px;
+	position: relative;
+}
+
+.team-paragraph {
+	font-size: 16px;
+	/* background: rgb(255, 255, 255); */
+	color:white; 
+	/* border: 1px solid #999; */
+}
+
+.fixtures-paragraph {
+	font-size: 16px;
+	/* background: rgb(255, 255, 255); */
+	color:white; 
+	/* border: 1px solid #999; */
+}
+
+.container::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0px;
+	height: 100%;
+	width: 100%;
+	background-image: url(images/oldtrafford.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	background-size: cover;
+	/* opacity: 0.5; */
+	z-index: -1;
+	padding: 20px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+/*Main Navagtion */
+
+.main-navigation {
+	display: flex;
+	justify-content: center;
+	background-color: #fff;
+	padding: 10px 0;
+	border: 1px solid #999;
+	border-collapse: collapse;	
+}
+
+.main-navigation a {
+	padding: 0 10px;
+	font-weight: bold;
+	color: #9C260F;
+	text-decoration: none;
+}
+
+.main-navigation a:hover {
+	color: #d33819;
+	text-decoration: underline;
+	scale: 110%;
+}
+
+main p {
+	text-align: center;
+	padding-top: 10px;
+}
+
+footer {
+	text-align: center;
+	background-color: #fff;
+	padding: 10px;
+	border: 1px solid #999;
+}
+
+.gallery-image {
+	background-image: url(images/oldtrafford.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	background-size: cover;
+	/* opacity: ; */
+	z-index: -1;
+	padding: 20px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+/* Gallery Properties*/
+
+.gallery-image img {
+	height: 250px;
+	width: 350px;
+	transform: scale(1.0);
+	transition: transform 0.4s ease;
+}
+
+.img-box {
+	box-sizing: content-box;
+	margin: 10px;
+	height: 250px;
+	width: 350px;
+	overflow: hidden;
+	display: inline-block;
+	color: white;
+	position: relative;
+	background-color: white;
+}
+
+.caption {
+	position: absolute;
+	bottom: 5px;
+	left: 20px;
+	opacity: 0;
+	transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.transparent-box {
+	height: 250px;
+	width: 350px;
+	background-color: rgba(0, 0, 0, 0);
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: background-color 0.3s ease;
+}
+
+.img-box:hover img {
+	transform: scale(1.1);
+}
+
+.img-box:hover .transparent-box {
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.img-box:hover .caption {
+	transform: translateY(-20px);
+	opacity: 1;
+}
+
+.img-box:hover {
+	cursor: pointer;
+}
+
+.opacity-low {
+	font-size: 0.8em;
+	opacity: 0.5;
+}
+
+/*Table Controls*/
+
+.table-caption {
+	font-size: 18px;
+	color:#fff ;
+}
+
+table,td,th {
+	background: rgb(239, 235, 235);
+	/* background: linear-gradient(2deg, rgba(255,0,0,1) 0%, rgba(121,9,21,1) 94%, rgba(0,0,0,1) 100%); */
+	margin:auto;
+	text-align: center;
+	/* columns: 4; */
+	grid-row: auto;
+    border: 1px solid #333;
+}
+
+thead,tfoot {
+  background-color: #333;
+  color: #fff;
+}
+
+/* .centre {
+	margin-left: auto;
+	margin-right: auto;
+} */
